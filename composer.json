@@ -9,7 +9,7 @@
         "ext-iconv": "*",
         "jwilsson/spotify-web-api-php": "^2.10",
         "sensio/framework-extra-bundle": "^5.4",
-        "symfony/asset": "*",
+        "symfony/asset": "4.3.*",
         "symfony/console": "*",
         "symfony/dotenv": "*",
         "symfony/expression-language": "*",

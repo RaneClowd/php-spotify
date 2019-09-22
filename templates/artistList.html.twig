@@ -2,6 +2,32 @@
 
 {% block body %}
   {% for artist in artists %}
-    <div>{{ artist.name }}</div>
+    <div></div>
+
+    <div class="card">
+      <div class="card-image">
+        <img class="artist-image" src="{{ artist.images[0].url }}">
+        <span class="card-title">{{ artist.name }}</span>
+      </div>
+    </div>
   {% endfor %}
+{% endblock %}
+
+{% block style %}
+  .card {
+    margin: 10px;
+  }
+
+  .card-title {
+    background: rgba(0, 0, 0, 0.3);
+  }
+
+  .artist-image {
+    max-width: 30vw;
+  }
+
+  .app-container {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
 {% endblock %}

@@ -1,0 +1,21 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+  <h5>
+    Hello! Authorize with Spotify to view your personalized data, or select to see mine.
+  </h5>
+  <div class="button-container">
+    <a class="waves-effect waves-light btn" href="{{ path('spotify') }}">Use my Spotify</a>
+    <a class="waves-effect waves-light btn">See test data</a>
+  </div>
+{% endblock %}
+
+{% block style %}
+  .button-container {
+    margin: 20px;
+  }
+
+  .button-container a {
+    margin: 10px;
+  }
+{% endblock %}
