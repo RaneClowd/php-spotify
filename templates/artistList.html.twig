@@ -2,24 +2,21 @@
 
 {% block body %}
   {% for artist in artists %}
-    <div></div>
-
-    <div class="card">
+    <a class="card hoverable" href="{{ path('artistDetails', {artistId: artist.id})}}">
       <div class="card-image">
         <img class="artist-image" src="{{ artist.images[0].url }}">
-        <span class="card-title">{{ artist.name }}</span>
       </div>
-    </div>
+      <div class="card-content">
+        {{ artist.name }}
+      </div>
+    </a>
   {% endfor %}
 {% endblock %}
 
 {% block style %}
   .card {
     margin: 10px;
-  }
-
-  .card-title {
-    background: rgba(0, 0, 0, 0.3);
+    cursor: pointer;
   }
 
   .artist-image {

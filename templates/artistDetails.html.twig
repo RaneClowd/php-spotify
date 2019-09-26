@@ -1,0 +1,21 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+  <ul class="collection">
+    {% for track in tracks %}
+      <li class="collection-item avatar valign-wrapper">
+        <img src="{{ track.album.images[0].url }}" class="circle">
+        <span class="title">{{ track.name }}</span>
+        <audio controls>
+          <source src="{{ track.preview_url }}" type="audio/mpeg">
+        </audio>
+      </li>
+    {% endfor %}
+  </ul>
+{% endblock %}
+
+{% block style %}
+  body {
+    background-image: url({{ tracks[0].album.artists[0].images[3].url }})
+  }
+{% endblock %}
